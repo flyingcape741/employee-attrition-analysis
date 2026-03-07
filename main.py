@@ -93,6 +93,7 @@ result2 = []
 for pred in predictions:
     result2.append(pred['class_ids'][0])
 
+"""
 print(result2)
 
 YesCount = 0
@@ -101,7 +102,7 @@ for i in result2:
         YesCount = YesCount+1
 print(YesCount)
 
-
+"""
 
 
 

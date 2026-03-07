@@ -14,10 +14,14 @@ class DataHazir():
         self.dir_path = dir_path
         self.data_path = data_path
     def downloader(self):
+        try:
+            os.mkdir(self.data_path)
+        except:
+            return
+
         os.chdir(self.data_path)
         for a in os.listdir(self.data_path):
             os.remove(a)
-
 
         
         api.competition_download_file('ai-and-ml-level-1-kaggle-competition', 'train.csv', os.path.dirname(os.path.realpath(__file__)) + '\\Datasets')
